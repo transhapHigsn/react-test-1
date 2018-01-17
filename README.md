@@ -1,4 +1,4 @@
-## Pusher Chat Demo with React
+## Chatter using Pusher React react-virtualized semantic-ui-react
 
 - Clone repository
 - run npm install
