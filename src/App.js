@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Pusher from 'pusher-js';
-import Lister from './Lister'
+//import Lister from './Lister'
+import VList from './virtualList'
 import ChatBox from './ChatBox';
 import logo from './logo.svg';
 import './App.css';
+//import { List } from 'react-virtualized'
 
 class App extends Component {
   constructor(props) {
@@ -43,7 +45,17 @@ class App extends Component {
   }
 
   render() {
-    let list = this.state.chats
+    /*
+    function rowRenderer({key, index, isScrolling, isVisible, style}){
+      console.log(key)
+      console.log(style)
+          return (
+            <div key={key} style={style}>
+              {list[index]}
+            </div>
+          )
+        }
+    */
     return (
       <div className="App">
         <header className="App-header">
@@ -52,12 +64,16 @@ class App extends Component {
         </header>
         <section>
           <br />
+          
           <ChatBox
             text={this.state.text}
             username={this.state.username}
             handleTextChange={this.handleTextChange}
           />
-          <ChatList chats={this.state.chats} />
+          <br />
+          <div id="v-list">
+          <VList chats={this.state.chats} />
+          </div>
         </section>
       </div>
     );
