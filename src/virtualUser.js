@@ -3,8 +3,8 @@ import { List } from 'react-virtualized'
 import { List as Listt, Image } from 'semantic-ui-react'
 import avatar from './avatar.png'
 
-export default function VList(props){
-  let list = props.chats.reverse()
+export default function UList(props){
+  let list = props.names
   
   const rowRenderer  = ({
     key,         // Unique key within array of rows
@@ -21,8 +21,7 @@ export default function VList(props){
         <Listt.Item>
           <Image avatar src={avatar} />
           <Listt.Content>
-            <Listt.Header as='a'>{list[index].username}</Listt.Header>
-            <Listt.Description>{list[index].message}</Listt.Description>
+            <Listt.Header as='a'>{list[index]}</Listt.Header>
           </Listt.Content>
         </Listt.Item>
       </div>
@@ -33,10 +32,10 @@ export default function VList(props){
     <div id="col-12">
     
     <div id="col-10">
-      <h4 align="left" margin="35px">Messages</h4>
+      <h4 align="left" margin="35px">Chat Members</h4>
       <List
         width={500}
-        height={500}
+        height={150}
         rowCount={list.length}
         rowHeight={75}
         rowRenderer={rowRenderer}

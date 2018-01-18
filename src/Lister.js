@@ -2,15 +2,14 @@ import React from 'react'
 import { List, Image } from 'semantic-ui-react'
 import avatar from "./avatar.png"
 
-export default ({chats}) => (
+export default ({names}) => (
   <List>
-    { chats.map(chat => {
+    { names.map(name => {
       return(
         <List.Item>
           <Image avatar src={avatar} />
           <List.Content>
-            <List.Header as='a'>{chat.username}</List.Header>
-            <List.Description>{chat.message}</List.Description>
+            <List.Header as='a'>{name}</List.Header>
           </List.Content>
         </List.Item>
       )

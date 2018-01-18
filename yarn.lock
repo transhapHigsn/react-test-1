@@ -5026,6 +5026,10 @@ punycode@^1.2.4, punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
+pusher-js-auth@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/pusher-js-auth/-/pusher-js-auth-3.0.0.tgz#ae684c54ee2f5e88c9ca5d15e1b992f10612c9df"
+
 pusher-js@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/pusher-js/-/pusher-js-4.2.1.tgz#7c10e2f981b8ed4390c1cbed448eb5c0967aaa22"
