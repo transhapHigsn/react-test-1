@@ -29,8 +29,8 @@ class App extends Component {
     var names = []
 
     //creating pusher client
-    const pusher = new Pusher("22ae6b2c4ce1da757a39", {
-      cluster: "ap2",
+    const pusher = new Pusher("App_key", {
+      cluster: "App_cluster",
       encrypted: true,
       auth : {
         params: {
